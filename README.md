@@ -10,6 +10,6 @@ The program stores the `micros()` in EEPROM address `0x0010` and the `millis()` 
 When the powersource lives past 50 days, you'll need to account for the wraparound of the `millis()` timer ([ref](https://www.arduino.cc/en/Reference/Millis)).
 
 Reconnect and load the [ArduinoEEPROMdump](https://github.com/Mausy5043/ArduinoEEPROMdump) code.
-> This reads the chip's EEPROM and dumps it to the serial port.
-> You will need to convert the four bytes of interest to a decimal value
-> Use the resulting microsecond or millisecond value to determine to lifetime of the powersource.
+> * This reads the chip's EEPROM and dumps it to the serial port.
+> * You will need to convert the four bytes of interest to a decimal value.
+> * Use the resulting microsecond or millisecond value to determine the lifetime of the powersource.
