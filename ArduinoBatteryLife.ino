@@ -5,6 +5,27 @@
 (c) 2016, Maurice Hendrix  (mausy5043)
 ***************************************************************************** */
 
+/*
+ *
+ * BN: Nano Compatible ATMEGA328p
+ * VID: 1A86
+ * PID: 7523
+ * 2300mAh / 47h = 48mA
+ * 2300mAh / 43h = 53mA
+ */
+
+/*
+ * EXAMPLE CALCULATION *
+ * Output from EEPROM dumper:
+ * =-EEPROM DUMP-= 
+ * 0000  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ................
+ * 0010  9F 7C E9 54 09 60 1F F9 00 00 00 00 00 00 00 00 .|.T.`..........
+ *                  |----ms-----|
+ * 0x09601FF9 convert to decimal = 157'294'585 ms
+ * divide by 1000 to get seconds = 157'294 s
+ * divide by 3600 to get hours   = 43 h
+ */
+
 #include <EEPROM.h> 
 
 long addr = 0x10;
